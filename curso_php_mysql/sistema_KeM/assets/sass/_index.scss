@@ -1,0 +1,52 @@
+html, body{
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.index-login{
+    height: 90vh;
+    .title-login{
+        text-align: center;
+        color: $verde_btn !important;
+    }
+
+    .formulario-login{
+        margin-top: 100px;
+        text-align: center;
+        .input_login{
+            width: 700px;
+            text-align: center;
+            display: table;
+            margin: 20px auto 0px;
+            padding: 12px 0;
+            border: 1px solid $verde_btn;
+            border-radius: 7px;
+            font-size: 20px;
+            color: $verde_dark_btn;
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: $verde_btn;
+              }
+              &::-moz-placeholder { /* Firefox 19+ */
+                color: $verde_btn;
+              }
+              &:-ms-input-placeholder { /* IE 10+ */
+                color: $verde_btn;
+              }
+              &:-moz-placeholder { /* Firefox 18- */
+                color: $verde_btn;
+              }
+        }
+
+        .btn_entrar{
+            margin-top: 100px;
+            background-color: $verde_btn;
+            border: 1px solid $verde_dark_btn;
+            border-radius: $botao_fomulario;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            height: 45px;
+            width: 115px;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red74\green80\blue93;\red173\green173\blue173;
+\red184\green93\blue213;\red214\green85\blue98;\red155\green162\blue177;\red72\green168\blue181;\red81\green157\blue235;
+\red136\green185\blue102;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\i\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 ##
+\i0 \strokec4 \
+COMANDOS \
+\
+CRIAR PROJETO LARAVEL\
+composer create-project --prefer-dist laravel/laravel api-gurub2c\
+\
+CRIAR PROJETO LUMEN\
+composer create-project --prefer-dist laravel/lumen api-empresa\
+\
+composer create-project --prefer-dist laravel/laravel api-autenticco\
+\
+sudo apt-get install php7-fpm\
+sudo apt-get install php7-cli\
+sudo apt-get install php7-mcrypt\
+\
+sudo apt-get install nginx mysql-server php5-mysql php5-fpm php5-cli php5-mcrypt git\
+\
+
+\i \strokec3 ##
+\i0 \strokec4 \
+\
+\
+
+\i \strokec3 ##
+\i0 \strokec4 \
+LARAVEL\
+
+\i \strokec3 ##
+\i0 \strokec4 \
+\
+ROUTES\
+Diret\'f3rio respons\'e1vel para criar as rotas da aplica\'e7\'e3o\
+\
+VENDOR\
+Diret\'f3rio respons\'e1vel para armazenar biblioteca de terceiro \
+\
+RESOURCES\
+Diret\'f3rio respons\'e1vel para armazenar as views e arquivos pr\'e9 processados e compilado \strokec5 do\strokec4  js e css\
+\
+PUBLIC\
+Inicia todas as aplica\'e7\'f5es \strokec5 do\strokec4  projeto e \'e9 o diret\'f3rio respons\'e1vel para armazenar os c\'f3digo de css e js \strokec5 do\strokec4  projeto.\
+\
+DATABASE\
+Ficam todas as estruturas das tabelas \
+DATABASE/migrations\
+Criam tabela na base de dados de forma pr\'e1tica.\
+DATABASE/seeds\
+Inserir dados na tabela atrav\'e9s de comando \
+DATABASE/factories\
+Automatizar diversos dados na tabela para realizar dados de performance \
+\
+BOOTSTRAP\
+\'c9 o diret\'f3rio respons\'e1vel para dar o start no projeto, como se fosse um config. L\'e1 inicializa o autoload \strokec5 do\strokec4  projeto.\
+\
+APP\
+\'c9 o diret\'f3rio respons\'e1vel para controlar a model e controller \
+\
+MIDDLEWERE\
+Filtro para verificar tipo de permiss\'e3o de acesso ao sistema, ou seja, restri\'e7\'e3o de acesso.\
+\
+ARTISAN \
+Respons\'e1vel por criar classes entre outras estruturas da aplica\'e7\'e3o \strokec5 do\strokec4  laravel\
+Exemplo de como criar estrutura \
+php artisan - listar todos os comandos \strokec5 do\strokec4  artisan\
+php artisan make:controller NomeClasse\
+\
+Conceito Request \strokec6 $request\strokec4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \strokec7 *\strokec4  Conceito de depend\'eancia inject - Illuminate\strokec8 \\H\strokec4 ttp\strokec8 \\R\strokec4 equest classe onde onde vai tratar os dados da requisi\'e7\'e3o, nesse caso passamos como par\'e2metro o objeto Request e atribu\'edmos para \strokec6 $request\strokec4  que ficar\'e1 respons\'e1vel em obter todos os objetos da classe.\
+\strokec7 *\strokec4  Classe Request cont\'e9m diversos m\'e9todos para tratar os dados de uma request, sendo eles os m\'e9todos de \strokec9 all\strokec4 (), only(\'91parametro1\'92, \'91parametro2\'92) ou except(\'92todosMenosParametro1\'92, \strokec10 'todosMenosParametro2\'92)\strokec4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \strokec10 * Verificar os outros m\'e9todos na documenta\'e7\'e3o laravel e verificar o menu request;\strokec4 \
+\
+\strokec10 Diret\'f3rio - database \strokec4 \
+\strokec10 MIGRATION\strokec4 \
+\strokec10 Cria a estrutra da tabela no banco de dados executando o comando php artisan migration\strokec4 \
+\
+\strokec10 SEEDS\strokec4 \
+\strokec10 Criar registro nas tabelas da base de dados\strokec4 \
+\
+\strokec10 MODELS\strokec4 \
+\strokec10 * Os arquivos de model s\'e3o criados utilizando o comando artisan exemplo php artisan make:model NomeModel\strokec4 \
+\strokec10 * No arquivo model \'e9 preciso declarar o nome da tabela para que a rotina do framework entenda qual \'e9 a tabela que o model vai processar, exemplo, protected $table = '\strokec4 reserva\'92\strokec7 ;\strokec4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \strokec7 *\strokec4  Utilizar o public \strokec6 $fillable\strokec4  = [\'92nomeColuna\'92] para definir quais colunas da tabela que poder\'e1 ser utilizada em qualquer opera\'e7\'e3o - INSERT, UPDATE ou DELETE\strokec7 ;\strokec4 \
+\
+VALIDATION\
+A nova vers\'e3o no laravel permite criar regras para validar os dados \strokec5 do\strokec4  request e verificar a obrigatoriedade de cada campo caso \strokec5 for\strokec4  necess\'e1rio.\
+Foi criado a classe \strokec5 do\strokec4  artisan chamada make:request que permite o mesmo criar a classe para dar total regra para os dados request e definir os campos obrigat\'f3rio. A vari\'e1vel \strokec6 $rules\strokec4  que era definido na classe model passa a ter um controle diferente diretamente na classe de request.\
+Comando para criar a classe: php artisan make:request nomePasta\strokec8 \\\\\strokec4 nomeArquivoRequest\
+Obs: \'e9 preciso colocar no final \strokec5 do\strokec4  arquivo o nome de Request.\
+\
+REPOSITORY e INTERFACE\
+A camada de repository \'e9 utilizada para a realizar a l\'f3gica \strokec5 do\strokec4  request solicitado\strokec7 ;\strokec4 \
+A interface por sua vez realiza o contrato dos m\'e9todos da camada repository\strokec7 ;\strokec4 \
+Comando: php artisan make:repository Name\
+\
+CRIAR ESTRUTRA VIA INFYOM\
+Criar estrutura controller, model, repository e \strokec8 test\strokec4  com infyom\
+comando: php artisan infyom:api_scaffold Calendario --skip=migration,scaffold_requests,routes,api_routes,scaffold_routes,views,menu,dump-autolad\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\i \cf2 \strokec3 ### Criar estrutura de Model, View e Controller ###
+\i0 \strokec4 \
+php artisan infyom:api_scaffold Import --skip=migration,scaffold_requests,routes,api_routes,scaffold_routes,views,menu,dump-autolad\
+\
+php artisan infyom:api_scaffold CadEmpresa --skip=migration,scaffold_requests,routes,api_routes,scaffold_routes,views,menu,dump-autolad\
+\
+
+\i \strokec3 ###############
+\i0 \strokec4 \
+\
+Pasta APP: Nesta pasta voc\'ea encontrar\'e1 a maioria dos c\'f3digos de controle \strokec5 do\strokec4  seu sistema, como controladores, Modelos e defini\'e7\'f5es de rota. Se voc\'ea n\'e3o sabe o que \'e9 um Controlador, modelo ou defini\'e7\'f5es de rota, n\'e3o se preocupe, estudaremos sobre isto em um outro artigo.\
+\
+\
+Bootstrap: Nesta pasta voc\'ea encontrar\'e1 os arquivos respons\'e1veis pela inicializa\'e7\'e3o \strokec5 do\strokec4  Laravel como o autoload, app e a pasta cache.\
+\
+\
+Config: Nesta pasta voc\'ea encontrar\'e1 todos os arquivos respons\'e1veis pela configura\'e7\'e3o \strokec5 do\strokec4  sistema. \
+\
+\
+Database: Nesta pasta voc\'ea encontrara as famosas migrations que  s\'e3o compostas pelas estruturas das tabelas \strokec5 do\strokec4  seu banco de dados e s\'e3o como uma esp\'e9cie de backup desta mesma estrutura.\
+\
+\
+Public: Este \'e9 o diret\'f3rio p\'fablico \strokec5 do\strokec4  projeto, quando seu sistema estiver online este ser\'e1 o diret\'f3rio que o servidor ir\'e1 apontar para startar os processos de inicializa\'e7\'e3o da pasta bootstrap. Nesta pasta ser\'e1 o \strokec5 local\strokec4  onde existir\'e1 todos os arquivos p\'fablicos como o htaccess, robots.txt, folha de estilo, scripts, downloads ou imagens.\
+\
+\
+Resources: Nesta pasta voc\'ea encontrar\'e1 os arquivos que s\'e3o importantes para a entrega das views \strokec5 do\strokec4  seu sistema, aqui voc\'ea encontra a pasta assets que cont\'e9m os arquivos JS e SASS/LESS, a pasta Lang que armazena os arquivos de idioma e a t\'e3o famosa pasta VIEWS (Iremos falar sobre as Views em outro artigo).\
+\
+\
+Routes: Nesta pasta voc\'ea encontrar\'e1 todas as defini\'e7\'f5es de rota \strokec5 do\strokec4  sistema, sejam elas rotas HTTP, rotas de comandos \strokec5 do\strokec4  Artisan ou rotas de console.\
+\
+\
+Storage: Nesta pasta voc\'ea encontrar\'e1 os arquivos de caches, arquivos compilados e logs \strokec5 do\strokec4  sistema.\
+\
+\
+Tests: Nesta pasta voc\'ea encontrar\'e1 os testes de unidade e integra\'e7\'e3o \strokec5 do\strokec4  sistema.\
+\
+\
+Vendor: Nesta pasta voc\'ea encontrar\'e1 todas as depend\'eancias instaladas pelo Composer. Esta pasta \'e9 ignorada pelo Git (Se voc\'ea n\'e3o sabe o que \'e9 o Git, n\'e3o se preocupe, iremos falar sobre ele no pr\'f3ximo artigo) pois o Composer sempre deve ser executado como parte \strokec5 do\strokec4  processo de implanta\'e7\'e3o em outros servidores.\
+\
+\
+
+\i \strokec3 ##
+\i0 \strokec4 \
+LUMEN\
+
+\i \strokec3 ##
+\i0 \strokec4 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

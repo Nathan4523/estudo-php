@@ -1,0 +1,62 @@
+.formulario_delete{
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+    .block_itens{
+        float: left;
+        margin: auto;
+        width: 370px;
+        text-align: center;
+        font-weight: 400;
+    
+        .select_usuarios_up{
+            border: 1px solid #dedede;
+            background-color: transparent;
+            width: 80%;
+            text-align-last: center;
+            font-weight: 400;
+        }
+    
+        .select_itens_up{
+            display: table;
+            text-align-last: center;
+            font-weight: 400;
+            border: 1px solid #dedede;
+            background-color: transparent;
+            width: 80%;
+            margin: 20px auto 0;
+            clear: both;
+        }
+    }
+        
+    .campo_update{
+        text-align: center;
+        width: 80%;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        margin-top: 40px;
+    }
+    
+    .block_btn_up{
+        display: table;
+        text-align: center;
+        width: 100%;
+        .btn_alterar_user{
+            color: #fff;
+            background-color: $verde_title_user;
+            padding: 10px 0 8px;
+            width: 130px;
+            border: 1px solid #133115;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 100px;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background-color: $verde_dark_user;
+                transition: 0.3s;
+            }
+        }
+    }
+    
+}

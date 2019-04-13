@@ -1,0 +1,28 @@
+.block_first {
+    .title_block {
+        font-size: 40px;
+        margin-top: 50px;
+        font-weight: 700;
+        color: $verde_btn;
+    }
+    .lista_block {
+        border: 1px solid #cecece;
+        border-radius: 5px;
+        width: 300px;
+        margin: 0 auto 50px;
+        line-height: 1;
+
+        .p_content{
+            margin: 0;
+        }
+
+        .p_content:first-child{
+            margin-top: 15px;
+        }
+    }
+
+    hr{
+        border-top: 2px solid $verde_btn;
+        width: 200px;
+    }
+}

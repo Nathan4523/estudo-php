@@ -1,0 +1,75 @@
+#section_externo {
+    .btns_externo {
+        margin-top: 25px;
+        .btn_andamento {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .btn_todos {
+            font-size: 20px;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .barra {
+            font-size: 28px;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .active_btn_jobs {
+            margin-right: 25px;
+            background-color: $verde_btn;
+            color: #fff;
+            padding: 6px;
+            border-radius: 9px;
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+    .finalizar_job {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 15px 20px;
+        margin: 30px;
+        background-color: $verde_btn;
+        color: #fff;
+        border-radius: 65px;
+        width: 141px;
+        box-shadow: 2px 2px 2px #cecece;
+        z-index: 999999999;
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
+    .select_interno{
+        width: 80%;
+        background-color: #fff;
+        text-align-last: center;
+        clear: both;
+    }
+
+    .btn_finalizar_jobs{
+        clear: both;
+        display: table;
+        background-color: $verde_btn;
+        color: #fff;
+        margin: 33px auto 0;
+        border: 1px solid $verde_dark_btn;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 7px 25px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

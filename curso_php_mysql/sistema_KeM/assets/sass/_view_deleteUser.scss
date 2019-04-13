@@ -1,0 +1,39 @@
+section{
+    .formulario_delete{
+        margin-bottom: 180px;
+        margin-top: 100px;
+        .block_itens{
+            float: left;
+            margin: auto;
+            width: 370px;
+            text-align: center;
+            font-weight: 400;
+    
+            .select_usuarios_del{
+                border: 1px solid #dedede;
+                background-color: transparent;
+                width: 80%;
+                text-align-last: center;
+                font-weight: 400;
+            }
+        }
+
+        .btn_deletar_user{
+            color: #fff;
+            background-color: $verde_title_user;
+            padding: 10px 0 8px;
+            width: 130px;
+            border: 1px solid #133115;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background-color: $verde_dark_user;
+                transition: 0.3s;
+            }
+        }
+    }
+}

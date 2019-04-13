@@ -1,0 +1,59 @@
+.nav-item{
+    .nav-link{
+        color: rgba(0,0,0,.3);
+    }
+
+    .nav-link_block{
+        padding-right: .5rem;
+        padding-left: .5rem;
+        display: block;
+        padding: .5rem 1rem;
+        color: rgba(0,0,0,.3);
+        &:hover{
+            cursor: not-allowed;
+            color: rgba(0,0,0,.3);
+        }
+    }
+}
+
+h1{
+    text-align: center;
+    color: $verde_title_user !important;
+    border-bottom: 1px solid;
+    width: 600px;
+    margin: 50px auto 0 !important;
+}
+
+
+.linha_form{
+    text-align: center;
+    margin-top: 25px;
+    .input_user{
+        width: 570px;
+        margin: 15px 0 20px;
+        text-align: center;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #dedede;
+        background-color: transparent;
+        text-align-last: center;
+    }
+
+    .btn_cadastrar_user{
+        color: #fff;
+        background-color: $verde_title_user;
+        padding: 10px 0 8px;
+        width: 130px;
+        border: 1px solid #133115;
+        border-radius: 50px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        &:hover{
+            background-color: $verde_dark_user;
+            transition: 0.4s;
+        }
+    }
+}
